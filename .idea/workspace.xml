@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb492307-dbeb-4484-9f4f-9a8a897d5300" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/threading6/ThreadsOptimalizator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/threading6/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threading6/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/threading6/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/threading6/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/threading6/OrderCrossoverAlg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/threading6/OrderCrossoverAlg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,13 +14,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="700">
+              <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4386#4401#0" expanded="true" />
+                <element signature="e#4635#4650#0" expanded="true" />
+                <element signature="e#4848#4857#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5506#5507#0" expanded="true" />
@@ -192,9 +186,9 @@
         <option value="$PROJECT_DIR$/src/main/java/threading6/ShapeFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/resources/MainView.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/threading6/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/ThreadsOptimalizator.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/threading6/Controller.java" />
       </list>
     </option>
   </component>
@@ -397,18 +391,18 @@
       <workItem from="1559299585495" duration="851000" />
       <workItem from="1559517424272" duration="4984000" />
       <workItem from="1559769156523" duration="24000" />
-      <workItem from="1560440021511" duration="2136000" />
+      <workItem from="1560440021511" duration="3182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90375000" />
+    <option name="totallyTimeSpent" value="91421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -417,7 +411,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3362256" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3362256" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -553,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -594,12 +578,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5506#5507#0" expanded="true" />
             <element signature="e#5543#5544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4386#4401#0" expanded="true" />
+            <element signature="e#4635#4650#0" expanded="true" />
+            <element signature="e#4848#4857#0" expanded="true" />
           </folding>
         </state>
       </provider>

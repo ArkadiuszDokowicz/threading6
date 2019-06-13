@@ -7,7 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -16,9 +18,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Controller {
 
+    private List<HamiltonCycle> allCycles=new ArrayList<>();
+    private List<List<Integer>> allCyclesAsLists=new ArrayList<>();
     private int threadCounter;
     private Graph graph;
     private int vertexCounter;
+    private final int firstVertex=1;
     private List<List<Integer>>noVisualConnectionTable=new ArrayList<>();
     @FXML
     AnchorPane GraphArea;
@@ -43,11 +48,37 @@ public class Controller {
     }
 
     public void startAlgorithm(){
+        Randomizer rand=new Randomizer();
+        List<Integer>cycle=new ArrayList<>();
+        cycle.add(this.firstVertex);
+        while(cycle.size()!=this.vertexCounter){
+            Integer vertex=rand.getRandomInt(0,this.vertexCounter);
+            if(!cycle.contains(vertex)){
+                cycle.add(vertex);
+            }
+        }
+        cycle.remove(0);
+        allCyclesAsLists=this.listPermutations(cycle);
+        for(List l:allCyclesAsLists){
+            List<Integer>toAdd=l;
+            toAdd.add(0,this.firstVertex);
+            allCycles.add(new HamiltonCycle(l));
+        }
+        int cost;
+        for(HamiltonCycle hc:this.allCycles){
+            for(int i=0;i<hc.getCycle().size()-1;i++){
+                cost=this.noVisualConnectionTable.get(hc.getCycle().get(i)).get(hc.getCycle().get(i+1));
+                hc.addToCost(cost);
+            }
+        }
+        Collections.sort(this.allCycles);
+        System.out.println(allCycles.get(0));
+
         if(this.CheckVisualization.isSelected()){
             ThreadPoolExecutor algorithms = (ThreadPoolExecutor) Executors.newFixedThreadPool(threadCounter);
             ThreadsOptimalizator tho=new ThreadsOptimalizator(threadCounter);
             for (int i = 0; i < this.threadCounter; i++) {
-                algorithms.submit(new OrderCrossoverAlg(vertexCounter, 50, 1, this.noVisualConnectionTable,tho));
+                algorithms.submit(new OrderCrossoverAlg(vertexCounter, 50, this.firstVertex, this.noVisualConnectionTable,tho));
             }
             algorithms.shutdown();
 
@@ -133,5 +164,31 @@ public class Controller {
                 }
             }
         }
+    }
+
+    public  List<List<Integer>> listPermutations(List<Integer> list) {
+
+
+        if (list.size() == 0) {
+            List<List<Integer>> result = new ArrayList<List<Integer>>();
+            result.add(new ArrayList<Integer>());
+            return result;
+        }
+
+        List<List<Integer>> returnMe = new ArrayList<List<Integer>>();
+
+        Integer firstElement = list.remove(0);
+
+        List<List<Integer>> recursiveReturn = listPermutations(list);
+        for (List<Integer> li : recursiveReturn) {
+
+            for (int index = 0; index <= li.size(); index++) {
+                List<Integer> temp = new ArrayList<Integer>(li);
+                temp.add(index, firstElement);
+                returnMe.add(temp);
+            }
+
+        }
+        return returnMe;
     }
 }
