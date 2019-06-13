@@ -2,27 +2,30 @@ package threading6;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
 
-
+    private HashMap<List<Integer>,Boolean>wasteCollector=new HashMap<>();
     private String name=this.toString();
     private final int verticesSize;
     private int population;
     private List<HamiltonCycle> parents= new ArrayList<>();
+    private List<HamiltonCycle> wastedCycles= new ArrayList<>();
     private List<HamiltonCycle> fullGeneration=new ArrayList<>();
     private int firstVertex;
     private final int parentsSize=20;
     private List<List<Integer>>connectionTable=new ArrayList<>();
-
-    public OrderCrossoverAlg(int size,int population,int firstVertex,List<List<Integer>> connections) {
+    private ThreadsOptimalizator tho;
+    public OrderCrossoverAlg(int size,int population,int firstVertex,List<List<Integer>> connections,ThreadsOptimalizator thopt) {
        // this.vertices = vertices;
        // this.links = links;
         this.population=population;
         this.firstVertex=firstVertex;
         verticesSize = size;
         this.connectionTable=connections;
+        this.tho=thopt;
     }
 
     @Override
@@ -57,6 +60,10 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
 
         for(int i = 0; i<parentsSize; i++){
             this.parents.add(fullGeneration.get(i));
+        }
+        for(int i=parentsSize;i<this.population;i++){
+            this.wasteCollector.putIfAbsent(fullGeneration.get(i).getCycle(),true);
+            this.wastedCycles.add(fullGeneration.get(i));
         }
     }
     public int roulette(int roulette){ //this function heavily depends on ParentsSize value
@@ -96,7 +103,7 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
 
     }
     @Override
-    public void crossover() { //TODO repair crossover method
+    public void crossover() {
        // System.out.println("crossover");
         Randomizer rand=new Randomizer();
         for(int i=parents.size();i<fullGeneration.size();i++){
@@ -153,14 +160,16 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
     }
 
     @Override
-    public void mutation() {//TODO repair mutation method
+    public void mutation() {
       // System.out.println("mutation");
        for(int i=0;i<fullGeneration.size();i++){
            if(new Randomizer().getRandomInt(0,100)>80){
                List<Integer>cycle=fullGeneration.get(i).getCycle();
+               while(this.wasteCollector.containsKey(cycle)){
                Integer rand1=new Randomizer().getRandomInt(1,fullGeneration.get(i).getCycle().size()-2);
                Collections.swap(cycle,rand1,rand1+1);
                fullGeneration.get(i).setCycle(cycle);
+               }
            }
            else if(new Randomizer().getRandomInt(0,100)>80){
             Integer rand2=new Randomizer().getRandomInt(1,fullGeneration.get(i).getCycle().size()-1);
@@ -194,10 +203,16 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
         this.firstGeneration();
         this.selection();
         for(int i=0;i<200;i++) {
+            if(i%5==0){
+                this.wasteCollector.clear();
+            }
+            if(i%50==0){
+               this.parents=tho.expentance(this.parents);
+            }
             this.crossover();
             this.mutation();
             this.selection();
-            //System.out.println(i);
+
         }
         System.out.println(this.getFullGeneration().toString());
     }
