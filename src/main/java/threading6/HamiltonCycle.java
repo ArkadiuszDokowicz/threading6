@@ -7,7 +7,9 @@ public class HamiltonCycle implements Comparable<HamiltonCycle>  {
     private List<Integer> cycle;
     private Integer cost=0;
 
-
+    public Integer getCost() {
+        return cost;
+    }
 
     public void addToCost(int value){
         this.cost=this.cost+value;

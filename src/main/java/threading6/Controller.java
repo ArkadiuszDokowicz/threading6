@@ -6,18 +6,22 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import java.lang.reflect.Array;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 
 public class Controller {
 
+    private volatile List<String> fileNames=new ArrayList<>();
     private List<HamiltonCycle> allCycles=new ArrayList<>();
     private List<List<Integer>> allCyclesAsLists=new ArrayList<>();
     private int threadCounter;
@@ -47,7 +51,43 @@ public class Controller {
         this.ThreadsTextArea.clear();
     }
 
-    public void startAlgorithm(){
+    public void startAlgorithm() throws IOException {
+
+        JSONObject logDetails = new JSONObject();
+        logDetails.put("method:","Permutation");
+        long start = System.nanoTime();
+
+        HamiltonCycle result=this.findBestCycle();
+
+        long elapsedTime = (System.nanoTime() - start);
+        logDetails.put("endTime",elapsedTime);
+        logDetails.put("best Cycle",result.getCycle());
+        logDetails.put("best Cycle cost",result.getCost());
+        JSONObject logObject = new JSONObject();
+        logObject.put("test",logDetails);
+        JSONArray testsList = new JSONArray();
+        testsList.put(logObject);
+        this.fileNames.add("results.json");
+        try (FileWriter file = new FileWriter("results.json")) {
+
+            file.write(testsList.toString());
+            file.flush();
+
+        }
+        if(this.CheckVisualization.isSelected()){
+            ThreadPoolExecutor algorithms = (ThreadPoolExecutor) Executors.newFixedThreadPool(threadCounter);
+            ThreadsOptimalizator tho=new ThreadsOptimalizator(threadCounter);
+            for (int i = 0; i < this.threadCounter; i++) {
+
+                this.fileNames.add(Integer.toString(i)+".json");
+                algorithms.submit(new OrderCrossoverAlg(Integer.toString(i),vertexCounter, 50, this.firstVertex, this.noVisualConnectionTable,tho));
+            }
+            algorithms.shutdown();
+
+        }
+    }
+    private HamiltonCycle findBestCycle(){
+
         Randomizer rand=new Randomizer();
         List<Integer>cycle=new ArrayList<>();
         cycle.add(this.firstVertex);
@@ -73,27 +113,7 @@ public class Controller {
         }
         Collections.sort(this.allCycles);
         System.out.println(allCycles.get(0));
-
-        if(this.CheckVisualization.isSelected()){
-            ThreadPoolExecutor algorithms = (ThreadPoolExecutor) Executors.newFixedThreadPool(threadCounter);
-            ThreadsOptimalizator tho=new ThreadsOptimalizator(threadCounter);
-            for (int i = 0; i < this.threadCounter; i++) {
-                algorithms.submit(new OrderCrossoverAlg(vertexCounter, 50, this.firstVertex, this.noVisualConnectionTable,tho));
-            }
-            algorithms.shutdown();
-
-        }
-    /* TODO:adapt to new arguments of crossoverAlg
-        else {
-            ThreadPoolExecutor algorithms = (ThreadPoolExecutor) Executors.newFixedThreadPool(threadCounter);
-
-            for (int i = 0; i < this.threadCounter; i++) {
-                algorithms.submit(new OrderCrossoverAlg(graph.getVertices().size(), 50, 1, graph.getConnectionTable()));
-            }
-            algorithms.shutdown();
-            //this.graph.connectionTableToString();
-        }
-        */
+        return allCycles.get(0);
     }
 
     public void WriteGraph() throws Exception{

@@ -1,5 +1,10 @@
 package threading6;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -8,7 +13,7 @@ import java.util.List;
 public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
 
     private HashMap<List<Integer>,Boolean>wasteCollector=new HashMap<>();
-    private String name=this.toString();
+    private String name;
     private final int verticesSize;
     private int population;
     private List<HamiltonCycle> parents= new ArrayList<>();
@@ -18,9 +23,10 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
     private final int parentsSize=20;
     private List<List<Integer>>connectionTable=new ArrayList<>();
     private ThreadsOptimalizator tho;
-    public OrderCrossoverAlg(int size,int population,int firstVertex,List<List<Integer>> connections,ThreadsOptimalizator thopt) {
+    public OrderCrossoverAlg(String  name, int size, int population, int firstVertex, List<List<Integer>> connections, ThreadsOptimalizator thopt) {
        // this.vertices = vertices;
        // this.links = links;
+        this.name=name;
         this.population=population;
         this.firstVertex=firstVertex;
         verticesSize = size;
@@ -202,18 +208,46 @@ public class OrderCrossoverAlg implements travellingSalesmanAlgorithm,Runnable {
     public void run() {
         this.firstGeneration();
         this.selection();
-        for(int i=0;i<200;i++) {
-            if(i%5==0){
-                this.wasteCollector.clear();
-            }
-            if(i%50==0){
-               this.parents=tho.expentance(this.parents);
-            }
-            this.crossover();
-            this.mutation();
-            this.selection();
+        FileWriter file = null;
+        try {
 
+            JSONArray testsList = new JSONArray();
+            file = new FileWriter(this.name+".json");
+            long start = System.nanoTime();
+            for(int i=0;i<200;i++) {
+                if(i%5==0){
+                    this.wasteCollector.clear();
+                }
+                if(i%50==0){
+                    this.parents=tho.expentance(this.parents);
+                }
+                this.crossover();
+                this.mutation();
+                this.selection();
+
+
+                JSONObject logDetails = new JSONObject();
+                logDetails.put("method:","Genetic");
+
+                long elapsedTime = (System.nanoTime() - start);
+                //System.out.println(elapsedTime);
+                logDetails.put("endTime",elapsedTime);
+                logDetails.put("best Cycle",this.parents.get(0).getCycle());
+                logDetails.put("best Cycle cost",this.parents.get(0).getCost());
+                JSONObject logObject = new JSONObject();
+                logObject.put("test",logDetails);
+                testsList.put(logObject);
+
+            }
+
+            file.write(testsList.toString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println(this.getFullGeneration().toString());
+
+
+
+        //System.out.println(this.getFullGeneration().toString());
     }
 }
