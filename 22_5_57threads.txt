@@ -1,0 +1,4 @@
+threads: 1 cost: 436
+threads: 1 cost: 386
+threads: 1 cost: 370
+threads: 1 cost: 354

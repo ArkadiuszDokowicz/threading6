@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="bb492307-dbeb-4484-9f4f-9a8a897d5300" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/threading6/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threading6/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/threading6/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/threading6/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/threading6/HamiltonCycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/threading6/HamiltonCycle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/threading6/OrderCrossoverAlg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/threading6/OrderCrossoverAlg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -12,37 +21,74 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-473758077">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.117" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="915" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="915" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="935">
               <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+=======
+            <state relative-caret-position="-1219">
+              <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+>>>>>>> 5d68c6c18b8ca79d9c35573ed8e0d2f13c77b0a1
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#findBestCycle#0;class#Controller#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/travellingSalesman.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/threading6/ThreadsOptimalizator.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1105">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -85,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+            <state relative-caret-position="191">
+              <caret line="250" column="10" selection-start-line="250" selection-start-column="10" selection-end-line="250" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,10 +143,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="136">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +204,8 @@
       <find>system.out</find>
       <find>parents</find>
       <find>select</find>
+      <find>find</find>
+      <find>filenames</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,7 +215,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Controller.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/graphVisualization.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Randomizer.java" />
@@ -175,13 +223,14 @@
         <option value="$PROJECT_DIR$/src/main/java/threading6/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/travellingSalesmanAlgorythm.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Vertex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/ShapeFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/resources/MainView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/ThreadsOptimalizator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java" />
         <option value="$PROJECT_DIR$/src/main/java/threading6/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java" />
       </list>
     </option>
   </component>
@@ -241,52 +290,44 @@
         <subPane>
           <expand>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threading6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threading6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threading6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threading6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threading6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="threading6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="travellingSalesman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travellingSalesman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="threading6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -294,7 +335,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559567371183" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560610943574" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -385,19 +426,32 @@
       <workItem from="1559517424272" duration="4984000" />
       <workItem from="1559769156523" duration="24000" />
       <workItem from="1560440021511" duration="3194000" />
+<<<<<<< HEAD
       <workItem from="1560601939809" duration="1180000" />
       <workItem from="1560786568111" duration="16000" />
+=======
+      <workItem from="1560601939809" duration="600000" />
+      <workItem from="1560603993169" duration="6324000" />
+      <workItem from="1560634163098" duration="900000" />
+>>>>>>> 5d68c6c18b8ca79d9c35573ed8e0d2f13c77b0a1
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="92629000" />
+=======
+    <option name="totallyTimeSpent" value="99257000" />
+>>>>>>> 5d68c6c18b8ca79d9c35573ed8e0d2f13c77b0a1
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23720682" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24205749" />
+>>>>>>> 5d68c6c18b8ca79d9c35573ed8e0d2f13c77b0a1
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -406,7 +460,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3362256" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33551556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,7 +478,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.052771855" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.052193645" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,13 +493,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/graphVisualization.fxml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15929">
@@ -488,6 +535,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -498,6 +546,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 5d68c6c18b8ca79d9c35573ed8e0d2f13c77b0a1
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -509,9 +559,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travellingSalesman.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
@@ -544,26 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Link.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -585,6 +622,38 @@
           <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/HamiltonCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/OrderCrossoverAlg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="250" column="10" selection-start-line="250" selection-start-column="10" selection-end-line="250" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/threading6/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219">
+          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findBestCycle#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
